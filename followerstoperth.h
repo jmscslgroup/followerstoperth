@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'followerstoperth'.
 //
-// Model version                  : 3.38
+// Model version                  : 3.42
 // Simulink Coder version         : 9.5 (R2021a) 14-Nov-2020
-// C/C++ source code generated on : Thu Jul  1 14:33:38 2021
+// C/C++ source code generated on : Tue Jul  6 01:19:05 2021
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -41,21 +41,24 @@ struct B_followerstoperth_T {
   SL_Bus_followerstoperth_geometry_msgs_Twist BusAssignment;// '<Root>/Bus Assignment' 
   real_T x1;
   real_T x2;
+  real_T x3;
   SL_Bus_followerstoperth_std_msgs_Float64 In1_m;// '<S13>/In1'
 };
 
 // Block states (default storage) for system '<Root>'
 struct DW_followerstoperth_T {
-  ros_slros_internal_block_GetP_T obj; // '<S2>/Get Parameter4'
+  ros_slros_internal_block_GetP_T obj; // '<S2>/Get Parameter6'
+  ros_slros_internal_block_GetP_T obj_c;// '<S2>/Get Parameter5'
+  ros_slros_internal_block_GetP_T obj_b;// '<S2>/Get Parameter4'
   ros_slros_internal_block_GetP_T obj_n;// '<S2>/Get Parameter3'
   ros_slros_internal_block_GetP_T obj_k;// '<S2>/Get Parameter2'
-  ros_slros_internal_block_GetP_T obj_c;// '<S2>/Get Parameter1'
+  ros_slros_internal_block_GetP_T obj_ci;// '<S2>/Get Parameter1'
   ros_slroscpp_internal_block_P_T obj_d;// '<S12>/SinkBlock'
   ros_slroscpp_internal_block_P_T obj_o;// '<S3>/SinkBlock'
   ros_slroscpp_internal_block_P_T obj_kl;// '<S10>/SinkBlock'
   ros_slroscpp_internal_block_S_T obj_l;// '<S7>/SourceBlock'
   ros_slroscpp_internal_block_S_T obj_f;// '<S6>/SourceBlock'
-  ros_slroscpp_internal_block_S_T obj_b;// '<S5>/SourceBlock'
+  ros_slroscpp_internal_block_S_T obj_bg;// '<S5>/SourceBlock'
 };
 
 // Parameters (default storage)

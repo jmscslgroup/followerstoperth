@@ -33,6 +33,12 @@ SimulinkParameterGetter<real64_T, double> ParamGet_followerstoperth_230;
 // For Block followerstoperth/Follower Stopper Switch Control/Get Parameter4
 SimulinkParameterGetter<real64_T, double> ParamGet_followerstoperth_235;
 
+// For Block followerstoperth/Follower Stopper Switch Control/Get Parameter5
+SimulinkParameterGetter<real64_T, double> ParamGet_followerstoperth_240;
+
+// For Block followerstoperth/Follower Stopper Switch Control/Get Parameter6
+SimulinkParameterGetter<real64_T, double> ParamGet_followerstoperth_242;
+
 void slros_node_init(int argc, char** argv)
 {
   ros::init(argc, argv, SLROSNodeName);

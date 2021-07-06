@@ -37,6 +37,12 @@ extern SimulinkParameterGetter<real64_T, double> ParamGet_followerstoperth_230;
 // For Block followerstoperth/Follower Stopper Switch Control/Get Parameter4
 extern SimulinkParameterGetter<real64_T, double> ParamGet_followerstoperth_235;
 
+// For Block followerstoperth/Follower Stopper Switch Control/Get Parameter5
+extern SimulinkParameterGetter<real64_T, double> ParamGet_followerstoperth_240;
+
+// For Block followerstoperth/Follower Stopper Switch Control/Get Parameter6
+extern SimulinkParameterGetter<real64_T, double> ParamGet_followerstoperth_242;
+
 void slros_node_init(int argc, char** argv);
 
 #endif

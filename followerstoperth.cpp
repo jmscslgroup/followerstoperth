@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'followerstoperth'.
 //
-// Model version                  : 3.38
+// Model version                  : 3.42
 // Simulink Coder version         : 9.5 (R2021a) 14-Nov-2020
-// C/C++ source code generated on : Thu Jul  1 14:33:38 2021
+// C/C++ source code generated on : Tue Jul  6 01:19:05 2021
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -35,11 +35,11 @@ void followerstoperth_step(void)
   SL_Bus_followerstoperth_std_msgs_Float64 b_varargout_2;
   SL_Bus_followerstoperth_std_msgs_Float64 rtb_BusAssignment1_d;
   SL_Bus_followerstoperth_std_msgs_UInt8 rtb_BusAssignment1;
+  real_T b_idx_0;
   real_T rtb_Subtract;
   real_T value;
   real_T value_0;
-  real_T x1_tmp;
-  real_T x3;
+  real_T value_1;
   boolean_T b_varargout_1;
 
   // Outputs for Atomic SubSystem: '<Root>/Subscribe2'
@@ -106,47 +106,57 @@ void followerstoperth_step(void)
   ParamGet_followerstoperth_228.get_parameter(&followerstoperth_B.x2);
 
   // MATLABSystem: '<S2>/Get Parameter3'
-  ParamGet_followerstoperth_230.get_parameter(&x3);
+  ParamGet_followerstoperth_230.get_parameter(&followerstoperth_B.x3);
 
   // MATLABSystem: '<S2>/Get Parameter4'
-  ParamGet_followerstoperth_235.get_parameter(&value_0);
+  ParamGet_followerstoperth_235.get_parameter(&followerstoperth_B.x1);
+
+  // MATLABSystem: '<S2>/Get Parameter5'
+  ParamGet_followerstoperth_240.get_parameter(&value_0);
+
+  // MATLABSystem: '<S2>/Get Parameter6'
+  ParamGet_followerstoperth_242.get_parameter(&value_1);
 
   // MATLAB Function: '<S2>/MATLAB Function1' incorporates:
   //   MATLABSystem: '<S2>/Get Parameter1'
   //   MATLABSystem: '<S2>/Get Parameter2'
   //   MATLABSystem: '<S2>/Get Parameter3'
   //   MATLABSystem: '<S2>/Get Parameter4'
+  //   MATLABSystem: '<S2>/Get Parameter5'
+  //   MATLABSystem: '<S2>/Get Parameter6'
 
-  followerstoperth_B.x1 = followerstoperth_B.In1_b.Linear.Z;
+  b_idx_0 = followerstoperth_B.In1_b.Linear.Z;
   if (followerstoperth_B.In1_b.Linear.Z >= 0.0) {
-    followerstoperth_B.x1 = 0.0;
+    b_idx_0 = 0.0;
   }
 
-  x1_tmp = followerstoperth_B.x1 * followerstoperth_B.x1 * 0.5;
-  followerstoperth_B.x1 = (x1_tmp / 1.5 + value_0) + value *
+  b_idx_0 = b_idx_0 * b_idx_0 * 0.5;
+  followerstoperth_B.x1 = (b_idx_0 / 1.5 + followerstoperth_B.x1) + value *
     followerstoperth_B.In1.Linear.X;
-  followerstoperth_B.x2 = ((value_0 + 6.0) / 2.0 + x1_tmp) +
-    followerstoperth_B.x2 * followerstoperth_B.In1.Linear.X;
-  x3 = (x1_tmp / 0.5 + 6.0) + x3 * followerstoperth_B.In1.Linear.X;
-  value_0 = rtb_Subtract;
+  followerstoperth_B.x2 = (b_idx_0 + value_0) + followerstoperth_B.x2 *
+    followerstoperth_B.In1.Linear.X;
+  followerstoperth_B.x3 = (b_idx_0 / 0.5 + value_1) + followerstoperth_B.x3 *
+    followerstoperth_B.In1.Linear.X;
+  value_1 = rtb_Subtract;
   if (rtb_Subtract < 0.0) {
-    value_0 = 0.0;
+    value_1 = 0.0;
   }
 
-  x1_tmp = 0.0;
-  if (followerstoperth_B.In1_m.Data > x3) {
-    x1_tmp = rtb_Subtract;
+  value_0 = 0.0;
+  if (followerstoperth_B.In1_m.Data > followerstoperth_B.x3) {
+    value_0 = rtb_Subtract;
   }
 
   if ((followerstoperth_B.In1_m.Data > followerstoperth_B.x2) &&
-      (followerstoperth_B.In1_m.Data <= x3)) {
-    x1_tmp = (rtb_Subtract - value_0) * (followerstoperth_B.In1_m.Data -
-      followerstoperth_B.x2) / (x3 - followerstoperth_B.x2) + value_0;
+      (followerstoperth_B.In1_m.Data <= followerstoperth_B.x3)) {
+    value_0 = (rtb_Subtract - value_1) * (followerstoperth_B.In1_m.Data -
+      followerstoperth_B.x2) / (followerstoperth_B.x3 - followerstoperth_B.x2) +
+      value_1;
   }
 
   if ((followerstoperth_B.In1_m.Data > followerstoperth_B.x1) &&
       (followerstoperth_B.In1_m.Data <= followerstoperth_B.x2)) {
-    x1_tmp = (followerstoperth_B.In1_m.Data - followerstoperth_B.x1) * value_0 /
+    value_0 = (followerstoperth_B.In1_m.Data - followerstoperth_B.x1) * value_1 /
       (followerstoperth_B.x2 - followerstoperth_B.x1);
   }
 
@@ -156,7 +166,7 @@ void followerstoperth_step(void)
   //   MATLAB Function: '<S2>/MATLAB Function1'
 
   followerstoperth_B.BusAssignment = followerstoperth_P.Constant_Value;
-  followerstoperth_B.BusAssignment.Linear.X = x1_tmp;
+  followerstoperth_B.BusAssignment.Linear.X = value_0;
   followerstoperth_B.BusAssignment.Angular.Z =
     followerstoperth_P.Constant_Value_b;
 
@@ -167,11 +177,11 @@ void followerstoperth_step(void)
   // End of Outputs for SubSystem: '<Root>/Publish'
 
   // MATLAB Function: '<S2>/MATLAB Function1'
-  if (followerstoperth_B.In1_m.Data > x3) {
+  if (followerstoperth_B.In1_m.Data > followerstoperth_B.x3) {
     // BusAssignment: '<S4>/Bus Assignment1'
     rtb_BusAssignment1.Data = 0U;
   } else if ((followerstoperth_B.In1_m.Data > followerstoperth_B.x2) &&
-             (followerstoperth_B.In1_m.Data <= x3)) {
+             (followerstoperth_B.In1_m.Data <= followerstoperth_B.x3)) {
     // BusAssignment: '<S4>/Bus Assignment1'
     rtb_BusAssignment1.Data = 1U;
   } else if ((followerstoperth_B.In1_m.Data > followerstoperth_B.x1) &&
@@ -278,15 +288,15 @@ void followerstoperth_initialize(void)
     // End of SystemInitialize for SubSystem: '<S5>/Enabled Subsystem'
 
     // Start for MATLABSystem: '<S5>/SourceBlock'
-    followerstoperth_DW.obj_b.matlabCodegenIsDeleted = false;
-    followerstoperth_DW.obj_b.isInitialized = 1;
+    followerstoperth_DW.obj_bg.matlabCodegenIsDeleted = false;
+    followerstoperth_DW.obj_bg.isInitialized = 1;
     for (i = 0; i < 9; i++) {
       b_zeroDelimTopic_1[i] = tmp_0[i];
     }
 
     b_zeroDelimTopic_1[9] = '\x00';
     Sub_followerstoperth_237.createSubscriber(&b_zeroDelimTopic_1[0], 1);
-    followerstoperth_DW.obj_b.isSetupComplete = true;
+    followerstoperth_DW.obj_bg.isSetupComplete = true;
 
     // End of Start for MATLABSystem: '<S5>/SourceBlock'
     // End of SystemInitialize for SubSystem: '<Root>/Subscribe'
@@ -349,8 +359,8 @@ void followerstoperth_initialize(void)
     followerstoperth_DW.obj_k.isSetupComplete = true;
 
     // Start for MATLABSystem: '<S2>/Get Parameter1'
-    followerstoperth_DW.obj_c.matlabCodegenIsDeleted = false;
-    followerstoperth_DW.obj_c.isInitialized = 1;
+    followerstoperth_DW.obj_ci.matlabCodegenIsDeleted = false;
+    followerstoperth_DW.obj_ci.isInitialized = 1;
     b_zeroDelimTopic_0[0] = 't';
     b_zeroDelimTopic_0[1] = 'h';
     b_zeroDelimTopic_0[2] = '2';
@@ -358,7 +368,7 @@ void followerstoperth_initialize(void)
     ParamGet_followerstoperth_228.initialize(&b_zeroDelimTopic_0[0]);
     ParamGet_followerstoperth_228.initialize_error_codes(0, 1, 2, 3);
     ParamGet_followerstoperth_228.set_initial_value(1.2);
-    followerstoperth_DW.obj_c.isSetupComplete = true;
+    followerstoperth_DW.obj_ci.isSetupComplete = true;
 
     // Start for MATLABSystem: '<S2>/Get Parameter3'
     followerstoperth_DW.obj_n.matlabCodegenIsDeleted = false;
@@ -373,14 +383,36 @@ void followerstoperth_initialize(void)
     followerstoperth_DW.obj_n.isSetupComplete = true;
 
     // Start for MATLABSystem: '<S2>/Get Parameter4'
-    followerstoperth_DW.obj.matlabCodegenIsDeleted = false;
-    followerstoperth_DW.obj.isInitialized = 1;
+    followerstoperth_DW.obj_b.matlabCodegenIsDeleted = false;
+    followerstoperth_DW.obj_b.isInitialized = 1;
     b_zeroDelimName[0] = 'w';
     b_zeroDelimName[1] = '1';
     b_zeroDelimName[2] = '\x00';
     ParamGet_followerstoperth_235.initialize(&b_zeroDelimName[0]);
     ParamGet_followerstoperth_235.initialize_error_codes(0, 1, 2, 3);
     ParamGet_followerstoperth_235.set_initial_value(4.5);
+    followerstoperth_DW.obj_b.isSetupComplete = true;
+
+    // Start for MATLABSystem: '<S2>/Get Parameter5'
+    followerstoperth_DW.obj_c.matlabCodegenIsDeleted = false;
+    followerstoperth_DW.obj_c.isInitialized = 1;
+    b_zeroDelimName[0] = 'w';
+    b_zeroDelimName[1] = '2';
+    b_zeroDelimName[2] = '\x00';
+    ParamGet_followerstoperth_240.initialize(&b_zeroDelimName[0]);
+    ParamGet_followerstoperth_240.initialize_error_codes(0, 1, 2, 3);
+    ParamGet_followerstoperth_240.set_initial_value(5.25);
+    followerstoperth_DW.obj_c.isSetupComplete = true;
+
+    // Start for MATLABSystem: '<S2>/Get Parameter6'
+    followerstoperth_DW.obj.matlabCodegenIsDeleted = false;
+    followerstoperth_DW.obj.isInitialized = 1;
+    b_zeroDelimName[0] = 'w';
+    b_zeroDelimName[1] = '3';
+    b_zeroDelimName[2] = '\x00';
+    ParamGet_followerstoperth_242.initialize(&b_zeroDelimName[0]);
+    ParamGet_followerstoperth_242.initialize_error_codes(0, 1, 2, 3);
+    ParamGet_followerstoperth_242.set_initial_value(6.0);
     followerstoperth_DW.obj.isSetupComplete = true;
   }
 }
@@ -408,8 +440,8 @@ void followerstoperth_terminate(void)
 
   // Terminate for Atomic SubSystem: '<Root>/Subscribe'
   // Terminate for MATLABSystem: '<S5>/SourceBlock'
-  if (!followerstoperth_DW.obj_b.matlabCodegenIsDeleted) {
-    followerstoperth_DW.obj_b.matlabCodegenIsDeleted = true;
+  if (!followerstoperth_DW.obj_bg.matlabCodegenIsDeleted) {
+    followerstoperth_DW.obj_bg.matlabCodegenIsDeleted = true;
   }
 
   // End of Terminate for MATLABSystem: '<S5>/SourceBlock'
@@ -423,8 +455,8 @@ void followerstoperth_terminate(void)
   // End of Terminate for MATLABSystem: '<S2>/Get Parameter2'
 
   // Terminate for MATLABSystem: '<S2>/Get Parameter1'
-  if (!followerstoperth_DW.obj_c.matlabCodegenIsDeleted) {
-    followerstoperth_DW.obj_c.matlabCodegenIsDeleted = true;
+  if (!followerstoperth_DW.obj_ci.matlabCodegenIsDeleted) {
+    followerstoperth_DW.obj_ci.matlabCodegenIsDeleted = true;
   }
 
   // End of Terminate for MATLABSystem: '<S2>/Get Parameter1'
@@ -437,11 +469,25 @@ void followerstoperth_terminate(void)
   // End of Terminate for MATLABSystem: '<S2>/Get Parameter3'
 
   // Terminate for MATLABSystem: '<S2>/Get Parameter4'
+  if (!followerstoperth_DW.obj_b.matlabCodegenIsDeleted) {
+    followerstoperth_DW.obj_b.matlabCodegenIsDeleted = true;
+  }
+
+  // End of Terminate for MATLABSystem: '<S2>/Get Parameter4'
+
+  // Terminate for MATLABSystem: '<S2>/Get Parameter5'
+  if (!followerstoperth_DW.obj_c.matlabCodegenIsDeleted) {
+    followerstoperth_DW.obj_c.matlabCodegenIsDeleted = true;
+  }
+
+  // End of Terminate for MATLABSystem: '<S2>/Get Parameter5'
+
+  // Terminate for MATLABSystem: '<S2>/Get Parameter6'
   if (!followerstoperth_DW.obj.matlabCodegenIsDeleted) {
     followerstoperth_DW.obj.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S2>/Get Parameter4'
+  // End of Terminate for MATLABSystem: '<S2>/Get Parameter6'
 
   // Terminate for Atomic SubSystem: '<Root>/Publish'
   // Terminate for MATLABSystem: '<S3>/SinkBlock'
