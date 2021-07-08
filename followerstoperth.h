@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'followerstoperth'.
 //
-// Model version                  : 3.50
+// Model version                  : 3.53
 // Simulink Coder version         : 9.5 (R2021a) 14-Nov-2020
-// C/C++ source code generated on : Wed Jul  7 19:44:06 2021
+// C/C++ source code generated on : Wed Jul  7 20:38:48 2021
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -36,34 +36,29 @@
 
 // Block signals (default storage)
 struct B_followerstoperth_T {
-  SL_Bus_followerstoperth_geometry_msgs_Twist In1;// '<S18>/In1'
-  SL_Bus_followerstoperth_geometry_msgs_Twist In1_b;// '<S17>/In1'
+  SL_Bus_followerstoperth_geometry_msgs_Twist In1;// '<S15>/In1'
+  SL_Bus_followerstoperth_geometry_msgs_Twist In1_b;// '<S14>/In1'
   SL_Bus_followerstoperth_geometry_msgs_Twist BusAssignment;// '<Root>/Bus Assignment' 
-  char_T b_zeroDelimTopic[18];
   real_T x1;
   real_T x2;
   real_T x3;
-  real_T value;
-  real_T value_m;
-  SL_Bus_followerstoperth_std_msgs_Float64 In1_m;// '<S16>/In1'
+  SL_Bus_followerstoperth_std_msgs_Float64 In1_m;// '<S13>/In1'
 };
 
 // Block states (default storage) for system '<Root>'
 struct DW_followerstoperth_T {
-  ros_slros_internal_block_GetP_T obj; // '<Root>/Get Parameter'
-  ros_slros_internal_block_GetP_T obj_g;// '<S2>/Get Parameter6'
+  ros_slros_internal_block_GetP_T obj; // '<S2>/Get Parameter6'
   ros_slros_internal_block_GetP_T obj_c;// '<S2>/Get Parameter5'
   ros_slros_internal_block_GetP_T obj_b;// '<S2>/Get Parameter4'
   ros_slros_internal_block_GetP_T obj_n;// '<S2>/Get Parameter3'
   ros_slros_internal_block_GetP_T obj_k;// '<S2>/Get Parameter2'
   ros_slros_internal_block_GetP_T obj_ci;// '<S2>/Get Parameter1'
-  ros_slroscpp_internal_block_P_T obj_d;// '<S15>/SinkBlock'
-  ros_slroscpp_internal_block_P_T obj_dr;// '<S13>/SinkBlock'
+  ros_slroscpp_internal_block_P_T obj_d;// '<S12>/SinkBlock'
   ros_slroscpp_internal_block_P_T obj_o;// '<S3>/SinkBlock'
-  ros_slroscpp_internal_block_P_T obj_kl;// '<S11>/SinkBlock'
-  ros_slroscpp_internal_block_S_T obj_l;// '<S8>/SourceBlock'
-  ros_slroscpp_internal_block_S_T obj_f;// '<S7>/SourceBlock'
-  ros_slroscpp_internal_block_S_T obj_bg;// '<S6>/SourceBlock'
+  ros_slroscpp_internal_block_P_T obj_kl;// '<S10>/SinkBlock'
+  ros_slroscpp_internal_block_S_T obj_l;// '<S7>/SourceBlock'
+  ros_slroscpp_internal_block_S_T obj_f;// '<S6>/SourceBlock'
+  ros_slroscpp_internal_block_S_T obj_bg;// '<S5>/SourceBlock'
 };
 
 // Parameters (default storage)
@@ -72,33 +67,30 @@ struct P_followerstoperth_T_ {
                                                                 //  Referenced by: '<S1>/Constant'
 
   SL_Bus_followerstoperth_geometry_msgs_Twist Out1_Y0;// Computed Parameter: Out1_Y0
-                                                         //  Referenced by: '<S17>/Out1'
+                                                         //  Referenced by: '<S14>/Out1'
 
   SL_Bus_followerstoperth_geometry_msgs_Twist Constant_Value_k;// Computed Parameter: Constant_Value_k
-                                                                  //  Referenced by: '<S7>/Constant'
+                                                                  //  Referenced by: '<S6>/Constant'
 
   SL_Bus_followerstoperth_geometry_msgs_Twist Out1_Y0_e;// Computed Parameter: Out1_Y0_e
-                                                           //  Referenced by: '<S18>/Out1'
+                                                           //  Referenced by: '<S15>/Out1'
 
   SL_Bus_followerstoperth_geometry_msgs_Twist Constant_Value_f;// Computed Parameter: Constant_Value_f
-                                                                  //  Referenced by: '<S8>/Constant'
+                                                                  //  Referenced by: '<S7>/Constant'
 
   SL_Bus_followerstoperth_std_msgs_Float64 Constant_Value_c;// Computed Parameter: Constant_Value_c
-                                                               //  Referenced by: '<S9>/Constant'
-
-  SL_Bus_followerstoperth_std_msgs_Float64 Constant_Value_b;// Computed Parameter: Constant_Value_b
-                                                               //  Referenced by: '<S12>/Constant'
+                                                               //  Referenced by: '<S8>/Constant'
 
   SL_Bus_followerstoperth_std_msgs_Float64 Out1_Y0_k;// Computed Parameter: Out1_Y0_k
-                                                        //  Referenced by: '<S16>/Out1'
+                                                        //  Referenced by: '<S13>/Out1'
 
   SL_Bus_followerstoperth_std_msgs_Float64 Constant_Value_h;// Computed Parameter: Constant_Value_h
-                                                               //  Referenced by: '<S6>/Constant'
+                                                               //  Referenced by: '<S5>/Constant'
 
   SL_Bus_followerstoperth_std_msgs_UInt8 Constant_Value_m;// Computed Parameter: Constant_Value_m
-                                                             //  Referenced by: '<S14>/Constant'
+                                                             //  Referenced by: '<S11>/Constant'
 
-  real_T Constant_Value_be;            // Expression: 0
+  real_T Constant_Value_b;             // Expression: 0
                                           //  Referenced by: '<Root>/Constant'
 
 };
@@ -187,21 +179,18 @@ extern "C" {
 //  '<S1>'   : 'followerstoperth/Blank Message'
 //  '<S2>'   : 'followerstoperth/Follower Stopper Switch Control'
 //  '<S3>'   : 'followerstoperth/Publish'
-//  '<S4>'   : 'followerstoperth/Publish EffectiveHeadway'
-//  '<S5>'   : 'followerstoperth/Publish Region'
-//  '<S6>'   : 'followerstoperth/Subscribe'
-//  '<S7>'   : 'followerstoperth/Subscribe2'
-//  '<S8>'   : 'followerstoperth/Subscribe3'
-//  '<S9>'   : 'followerstoperth/Follower Stopper Switch Control/Blank Message1'
-//  '<S10>'  : 'followerstoperth/Follower Stopper Switch Control/MATLAB Function1'
-//  '<S11>'  : 'followerstoperth/Follower Stopper Switch Control/Publish1'
-//  '<S12>'  : 'followerstoperth/Publish EffectiveHeadway/Blank Message1'
-//  '<S13>'  : 'followerstoperth/Publish EffectiveHeadway/Publish1'
-//  '<S14>'  : 'followerstoperth/Publish Region/Blank Message1'
-//  '<S15>'  : 'followerstoperth/Publish Region/Publish1'
-//  '<S16>'  : 'followerstoperth/Subscribe/Enabled Subsystem'
-//  '<S17>'  : 'followerstoperth/Subscribe2/Enabled Subsystem'
-//  '<S18>'  : 'followerstoperth/Subscribe3/Enabled Subsystem'
+//  '<S4>'   : 'followerstoperth/Publish Region'
+//  '<S5>'   : 'followerstoperth/Subscribe'
+//  '<S6>'   : 'followerstoperth/Subscribe2'
+//  '<S7>'   : 'followerstoperth/Subscribe3'
+//  '<S8>'   : 'followerstoperth/Follower Stopper Switch Control/Blank Message1'
+//  '<S9>'   : 'followerstoperth/Follower Stopper Switch Control/MATLAB Function1'
+//  '<S10>'  : 'followerstoperth/Follower Stopper Switch Control/Publish1'
+//  '<S11>'  : 'followerstoperth/Publish Region/Blank Message1'
+//  '<S12>'  : 'followerstoperth/Publish Region/Publish1'
+//  '<S13>'  : 'followerstoperth/Subscribe/Enabled Subsystem'
+//  '<S14>'  : 'followerstoperth/Subscribe2/Enabled Subsystem'
+//  '<S15>'  : 'followerstoperth/Subscribe3/Enabled Subsystem'
 
 #endif                                 // RTW_HEADER_followerstoperth_h_
 
