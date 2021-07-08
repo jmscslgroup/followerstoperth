@@ -18,6 +18,9 @@ SimulinkPublisher<std_msgs::Float64, SL_Bus_followerstoperth_std_msgs_Float64> P
 // For Block followerstoperth/Publish
 SimulinkPublisher<geometry_msgs::Twist, SL_Bus_followerstoperth_geometry_msgs_Twist> Pub_followerstoperth_37;
 
+// For Block followerstoperth/Publish EffectiveHeadway/Publish1
+SimulinkPublisher<std_msgs::Float64, SL_Bus_followerstoperth_std_msgs_Float64> Pub_followerstoperth_251;
+
 // For Block followerstoperth/Publish Region/Publish1
 SimulinkPublisher<std_msgs::UInt8, SL_Bus_followerstoperth_std_msgs_UInt8> Pub_followerstoperth_165;
 
@@ -38,6 +41,9 @@ SimulinkParameterGetter<real64_T, double> ParamGet_followerstoperth_240;
 
 // For Block followerstoperth/Follower Stopper Switch Control/Get Parameter6
 SimulinkParameterGetter<real64_T, double> ParamGet_followerstoperth_242;
+
+// For Block followerstoperth/Get Parameter
+SimulinkParameterGetter<real64_T, double> ParamGet_followerstoperth_244;
 
 void slros_node_init(int argc, char** argv)
 {
