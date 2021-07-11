@@ -1,8 +1,8 @@
 <package>
-  <name>followerstoperth</name>
+  <name>followerstopperth</name>
   <version>1.0.0</version>
   <description>
-  This package is generated from followerstoperth Simulink model.
+  This package is generated from followerstopperth Simulink model.
   </description>
   <maintainer email="rahulbhadani@email.arizona.edu">Rahul Bhadani</maintainer>
   <license>BSD</license>

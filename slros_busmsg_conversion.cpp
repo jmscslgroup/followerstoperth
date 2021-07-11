@@ -1,9 +1,9 @@
 #include "slros_busmsg_conversion.h"
 
 
-// Conversions between SL_Bus_followerstoperth_geometry_msgs_Twist and geometry_msgs::Twist
+// Conversions between SL_Bus_followerstopperth_geometry_msgs_Twist and geometry_msgs::Twist
 
-void convertFromBus(geometry_msgs::Twist* msgPtr, SL_Bus_followerstoperth_geometry_msgs_Twist const* busPtr)
+void convertFromBus(geometry_msgs::Twist* msgPtr, SL_Bus_followerstopperth_geometry_msgs_Twist const* busPtr)
 {
   const std::string rosMessageType("geometry_msgs/Twist");
 
@@ -11,7 +11,7 @@ void convertFromBus(geometry_msgs::Twist* msgPtr, SL_Bus_followerstoperth_geomet
   convertFromBus(&msgPtr->linear, &busPtr->Linear);
 }
 
-void convertToBus(SL_Bus_followerstoperth_geometry_msgs_Twist* busPtr, geometry_msgs::Twist const* msgPtr)
+void convertToBus(SL_Bus_followerstopperth_geometry_msgs_Twist* busPtr, geometry_msgs::Twist const* msgPtr)
 {
   const std::string rosMessageType("geometry_msgs/Twist");
 
@@ -20,9 +20,9 @@ void convertToBus(SL_Bus_followerstoperth_geometry_msgs_Twist* busPtr, geometry_
 }
 
 
-// Conversions between SL_Bus_followerstoperth_geometry_msgs_Vector3 and geometry_msgs::Vector3
+// Conversions between SL_Bus_followerstopperth_geometry_msgs_Vector3 and geometry_msgs::Vector3
 
-void convertFromBus(geometry_msgs::Vector3* msgPtr, SL_Bus_followerstoperth_geometry_msgs_Vector3 const* busPtr)
+void convertFromBus(geometry_msgs::Vector3* msgPtr, SL_Bus_followerstopperth_geometry_msgs_Vector3 const* busPtr)
 {
   const std::string rosMessageType("geometry_msgs/Vector3");
 
@@ -31,7 +31,7 @@ void convertFromBus(geometry_msgs::Vector3* msgPtr, SL_Bus_followerstoperth_geom
   msgPtr->z =  busPtr->Z;
 }
 
-void convertToBus(SL_Bus_followerstoperth_geometry_msgs_Vector3* busPtr, geometry_msgs::Vector3 const* msgPtr)
+void convertToBus(SL_Bus_followerstopperth_geometry_msgs_Vector3* busPtr, geometry_msgs::Vector3 const* msgPtr)
 {
   const std::string rosMessageType("geometry_msgs/Vector3");
 
@@ -41,16 +41,16 @@ void convertToBus(SL_Bus_followerstoperth_geometry_msgs_Vector3* busPtr, geometr
 }
 
 
-// Conversions between SL_Bus_followerstoperth_std_msgs_Float64 and std_msgs::Float64
+// Conversions between SL_Bus_followerstopperth_std_msgs_Float64 and std_msgs::Float64
 
-void convertFromBus(std_msgs::Float64* msgPtr, SL_Bus_followerstoperth_std_msgs_Float64 const* busPtr)
+void convertFromBus(std_msgs::Float64* msgPtr, SL_Bus_followerstopperth_std_msgs_Float64 const* busPtr)
 {
   const std::string rosMessageType("std_msgs/Float64");
 
   msgPtr->data =  busPtr->Data;
 }
 
-void convertToBus(SL_Bus_followerstoperth_std_msgs_Float64* busPtr, std_msgs::Float64 const* msgPtr)
+void convertToBus(SL_Bus_followerstopperth_std_msgs_Float64* busPtr, std_msgs::Float64 const* msgPtr)
 {
   const std::string rosMessageType("std_msgs/Float64");
 
@@ -58,16 +58,16 @@ void convertToBus(SL_Bus_followerstoperth_std_msgs_Float64* busPtr, std_msgs::Fl
 }
 
 
-// Conversions between SL_Bus_followerstoperth_std_msgs_UInt8 and std_msgs::UInt8
+// Conversions between SL_Bus_followerstopperth_std_msgs_UInt8 and std_msgs::UInt8
 
-void convertFromBus(std_msgs::UInt8* msgPtr, SL_Bus_followerstoperth_std_msgs_UInt8 const* busPtr)
+void convertFromBus(std_msgs::UInt8* msgPtr, SL_Bus_followerstopperth_std_msgs_UInt8 const* busPtr)
 {
   const std::string rosMessageType("std_msgs/UInt8");
 
   msgPtr->data =  busPtr->Data;
 }
 
-void convertToBus(SL_Bus_followerstoperth_std_msgs_UInt8* busPtr, std_msgs::UInt8 const* msgPtr)
+void convertToBus(SL_Bus_followerstopperth_std_msgs_UInt8* busPtr, std_msgs::UInt8 const* msgPtr)
 {
   const std::string rosMessageType("std_msgs/UInt8");
 

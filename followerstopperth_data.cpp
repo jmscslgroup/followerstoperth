@@ -3,24 +3,24 @@
 // course requirements at degree granting institutions only.  Not for
 // government, commercial, or other organizational use.
 //
-// File: followerstoperth_data.cpp
+// File: followerstopperth_data.cpp
 //
-// Code generated for Simulink model 'followerstoperth'.
+// Code generated for Simulink model 'followerstopperth'.
 //
 // Model version                  : 3.53
 // Simulink Coder version         : 9.5 (R2021a) 14-Nov-2020
-// C/C++ source code generated on : Wed Jul  7 20:38:48 2021
+// C/C++ source code generated on : Sun Jul 11 13:25:16 2021
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
 // Code generation objectives: Unspecified
 // Validation result: Not run
 //
-#include "followerstoperth.h"
-#include "followerstoperth_private.h"
+#include "followerstopperth.h"
+#include "followerstopperth_private.h"
 
 // Block parameters (default storage)
-P_followerstoperth_T followerstoperth_P = {
+P_followerstopperth_T followerstopperth_P = {
   // Computed Parameter: Constant_Value
   //  Referenced by: '<S1>/Constant'
 

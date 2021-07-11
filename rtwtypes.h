@@ -5,11 +5,11 @@
 //
 // File: rtwtypes.h
 //
-// Code generated for Simulink model 'followerstoperth'.
+// Code generated for Simulink model 'followerstopperth'.
 //
 // Model version                  : 3.53
 // Simulink Coder version         : 9.5 (R2021a) 14-Nov-2020
-// C/C++ source code generated on : Wed Jul  7 20:38:48 2021
+// C/C++ source code generated on : Sun Jul 11 13:25:16 2021
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)

@@ -3,29 +3,29 @@
 // course requirements at degree granting institutions only.  Not for
 // government, commercial, or other organizational use.
 //
-// File: followerstoperth_types.h
+// File: followerstopperth_types.h
 //
-// Code generated for Simulink model 'followerstoperth'.
+// Code generated for Simulink model 'followerstopperth'.
 //
 // Model version                  : 3.53
 // Simulink Coder version         : 9.5 (R2021a) 14-Nov-2020
-// C/C++ source code generated on : Wed Jul  7 20:38:48 2021
+// C/C++ source code generated on : Sun Jul 11 13:25:16 2021
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
 // Code generation objectives: Unspecified
 // Validation result: Not run
 //
-#ifndef RTW_HEADER_followerstoperth_types_h_
-#define RTW_HEADER_followerstoperth_types_h_
+#ifndef RTW_HEADER_followerstopperth_types_h_
+#define RTW_HEADER_followerstopperth_types_h_
 #include "rtwtypes.h"
 
 // Model Code Variants
-#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_followerstoperth_geometry_msgs_Vector3_
-#define DEFINED_TYPEDEF_FOR_SL_Bus_followerstoperth_geometry_msgs_Vector3_
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_followerstopperth_geometry_msgs_Vector3_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_followerstopperth_geometry_msgs_Vector3_
 
 // MsgType=geometry_msgs/Vector3
-struct SL_Bus_followerstoperth_geometry_msgs_Vector3
+struct SL_Bus_followerstopperth_geometry_msgs_Vector3
 {
   real_T X;
   real_T Y;
@@ -34,37 +34,37 @@ struct SL_Bus_followerstoperth_geometry_msgs_Vector3
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_followerstoperth_geometry_msgs_Twist_
-#define DEFINED_TYPEDEF_FOR_SL_Bus_followerstoperth_geometry_msgs_Twist_
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_followerstopperth_geometry_msgs_Twist_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_followerstopperth_geometry_msgs_Twist_
 
 // MsgType=geometry_msgs/Twist
-struct SL_Bus_followerstoperth_geometry_msgs_Twist
+struct SL_Bus_followerstopperth_geometry_msgs_Twist
 {
   // MsgType=geometry_msgs/Vector3
-  SL_Bus_followerstoperth_geometry_msgs_Vector3 Linear;
+  SL_Bus_followerstopperth_geometry_msgs_Vector3 Linear;
 
   // MsgType=geometry_msgs/Vector3
-  SL_Bus_followerstoperth_geometry_msgs_Vector3 Angular;
+  SL_Bus_followerstopperth_geometry_msgs_Vector3 Angular;
 };
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_followerstoperth_std_msgs_Float64_
-#define DEFINED_TYPEDEF_FOR_SL_Bus_followerstoperth_std_msgs_Float64_
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_followerstopperth_std_msgs_Float64_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_followerstopperth_std_msgs_Float64_
 
 // MsgType=std_msgs/Float64
-struct SL_Bus_followerstoperth_std_msgs_Float64
+struct SL_Bus_followerstopperth_std_msgs_Float64
 {
   real_T Data;
 };
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_followerstoperth_std_msgs_UInt8_
-#define DEFINED_TYPEDEF_FOR_SL_Bus_followerstoperth_std_msgs_UInt8_
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_followerstopperth_std_msgs_UInt8_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_followerstopperth_std_msgs_UInt8_
 
 // MsgType=std_msgs/UInt8
-struct SL_Bus_followerstoperth_std_msgs_UInt8
+struct SL_Bus_followerstopperth_std_msgs_UInt8
 {
   uint8_T Data;
 };
@@ -119,12 +119,12 @@ struct ros_slroscpp_internal_block_S_T
 #endif                                // struct_ros_slroscpp_internal_block_S_T
 
 // Parameters (default storage)
-typedef struct P_followerstoperth_T_ P_followerstoperth_T;
+typedef struct P_followerstopperth_T_ P_followerstopperth_T;
 
 // Forward declaration for rtModel
-typedef struct tag_RTM_followerstoperth_T RT_MODEL_followerstoperth_T;
+typedef struct tag_RTM_followerstopperth_T RT_MODEL_followerstopperth_T;
 
-#endif                                 // RTW_HEADER_followerstoperth_types_h_
+#endif                                 // RTW_HEADER_followerstopperth_types_h_
 
 //
 // File trailer for generated code.

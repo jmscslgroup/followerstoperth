@@ -1,5 +1,5 @@
 // Copyright 2019-2021 The MathWorks, Inc.
-// Generated 07-Jul-2021 20:38:51
+// Generated 11-Jul-2021 13:25:21
 
 #ifdef _MSC_VER
 
@@ -23,7 +23,7 @@
 
 #endif                                 //_MSC_VER
 
-#include "followerstoperth.h"
+#include "followerstopperth.h"
 #include "rosnodeinterface.h"
 #include <thread>
 #include <chrono>
@@ -52,11 +52,11 @@ namespace ros
     {
       try {
         mNode = std::make_shared<ros::NodeHandle>();
-        ROS_INFO("** Starting the model \"followerstoperth\" **\n");
+        ROS_INFO("** Starting the model \"followerstopperth\" **\n");
 
         // initialize the model which will initialize the publishers and subscribers
-        rtmSetErrorStatus(followerstoperth_M, (NULL));
-        followerstoperth_initialize();
+        rtmSetErrorStatus(followerstopperth_M, (NULL));
+        followerstopperth_initialize();
 
         // create the threads for the rates in the Model
         mBaseRateThread = std::make_shared<std::thread>(&NodeInterface::
@@ -83,13 +83,13 @@ namespace ros
 
 #ifndef rtmGetStopRequested
 
-      return (!(rtmGetErrorStatus(followerstoperth_M)
+      return (!(rtmGetErrorStatus(followerstopperth_M)
                 == (NULL)));
 
 #else
 
-      return (!(rtmGetErrorStatus(followerstoperth_M)
-                == (NULL)) || rtmGetStopRequested(followerstoperth_M));
+      return (!(rtmGetErrorStatus(followerstopperth_M)
+                == (NULL)) || rtmGetStopRequested(followerstopperth_M));
 
 #endif
 
@@ -107,7 +107,7 @@ namespace ros
           mSchedulerThread.reset();
         }
 
-        followerstoperth_terminate();
+        followerstopperth_terminate();
         mNode.reset();
       }
     }
@@ -127,7 +127,7 @@ namespace ros
     // Base-rate task
     void NodeInterface::baseRateTask(void)
     {
-      mRunModel = (rtmGetErrorStatus(followerstoperth_M) ==
+      mRunModel = (rtmGetErrorStatus(followerstopperth_M) ==
                    (NULL));
       while (mRunModel) {
         mBaseRateSem.wait();
@@ -140,7 +140,7 @@ namespace ros
 
         if (!mRunModel)
           break;
-        followerstoperth_step();
+        followerstopperth_step();
         mRunModel = !NodeInterface::getStopRequestedFlag();
       }
 
